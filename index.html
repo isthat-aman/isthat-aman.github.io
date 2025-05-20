@@ -4,55 +4,169 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aman Gupta | Data Scientist Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f9f9f9; color: #333; }
-    header { background: #003366; color: white; padding: 2rem 1rem; text-align: center; }
-    header h1 { margin-bottom: 0.5rem; }
-    section { padding: 2rem 1.5rem; max-width: 1000px; margin: auto; }
-    h2 { border-bottom: 2px solid #003366; padding-bottom: 0.5rem; margin-bottom: 1rem; color: #003366; }
-    ul { list-style: disc; padding-left: 1.5rem; }
-    .contact a { color: #003366; text-decoration: none; }
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .skills-grid div { background: #eee; padding: 0.5rem 1rem; border-radius: 5px; }
-    footer { text-align: center; padding: 1rem; background: #003366; color: white; margin-top: 2rem; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #003366, #005588);
+      color: white;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    .intro h1 {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .intro p {
+      margin: 0.3rem 0;
+    }
+
+    .contact a {
+      color: #ffdd57;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    section {
+      background: white;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #003366;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .skills-stars li {
+      list-style: none;
+      font-size: 1rem;
+      margin: 0.4rem 0;
+    }
+
+    .skills-stars strong {
+      display: inline-block;
+      width: 200px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #003366;
+      color: white;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-pic {
+        margin-bottom: 1rem;
+      }
+
+      .intro {
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Aman Gupta</h1>
-    <p>Data Science Associate Consultant</p>
-    <p class="contact">
-      📍 Gurugram, India | ✉️ <a href="mailto:88amangupta@gmail.com">88amangupta@gmail.com</a> | 🔗 <a href="https://www.linkedin.com/in/amanok" target="_blank">LinkedIn</a>
-    </p>
+    <img src="resume_photo.jpg" alt="Aman Gupta" class="profile-pic" />
+    <div class="intro">
+      <h1>Aman Gupta</h1>
+      <p>Data Science Associate Consultant</p>
+      <p class="contact">
+        📍 Gurugram, India | ✉️ <a href="mailto:88amangupta@gmail.com">88amangupta@gmail.com</a> |
+        🔗 <a href="https://www.linkedin.com/in/amanok" target="_blank">LinkedIn</a>
+      </p>
+    </div>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <p>Senior Data Scientist with 4+ years of experience delivering scalable data science solutions across predictive analytics, resource optimization, and strategic decision-making. Skilled in building robust predictive models, analyzing large-scale datasets, and translating insights into actionable business strategies.</p>
+    <p>Hello, I'm Aman Gupta — a Data Science Associate Consultant based in Gurugram, India, with over 4 years of experience in analytics, machine learning, and strategic problem-solving. I specialize in designing data-driven solutions that optimize operations, enhance decision-making, and drive measurable business impact.</p>
+    <p>My expertise spans Python, PySpark, SQL, causal inference, and advanced machine learning techniques including XGBoost and Random Forests. I've led high-impact initiatives across healthcare and pharma, such as launching early adoption models for oncology drugs, identifying key opinion leaders through network analysis, and measuring ROI for patient support programs using real-world data.</p>
+    <p>I’m passionate about combining domain understanding with technical depth to solve complex business challenges. Constantly exploring new tools and methodologies, I’m eager to contribute to innovative data science projects that make a difference.</p>
   </section>
 
   <section>
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <div>Python</div><div>SQL</div><div>Spark</div><div>PySpark</div><div>Machine Learning</div>
-      <div>XGBoost</div><div>Random Forest</div><div>PUL</div><div>TensorFlow</div><div>Causal Inference</div>
-      <div>Git</div><div>Docker</div><div>Argo</div><div>Dataiku</div><div>Tableau</div>
-    </div>
+    <ul class="skills-stars">
+      <li><strong>Python</strong> ★★★★★</li>
+      <li><strong>Machine Learning</strong> ★★★★☆</li>
+      <li><strong>Natural Language Processing (NLP)</strong> ★★★★☆</li>
+      <li><strong>Generative AI</strong> ★★★☆☆</li>
+      <li><strong>SQL</strong> ★★★★☆</li>
+      <li><strong>MS Excel</strong> ★★★★☆</li>
+    </ul>
   </section>
 
   <section>
     <h2>Experience</h2>
-    <h3>ZS Associates – Gurugram, India (2021 – Present)</h3>
+
+    <h3>ZS Associates – Gurugram, India (Jan 2024 – Present)<br><em>Data Science Associate Consultant</em></h3>
     <ul>
-      <li>Led development of a customer targeting model for a $5.8B oncology drug launch using semi-supervised learning.</li>
-      <li>Built a KOL identification engine via community detection and PageRank on patient claims data.</li>
-      <li>Evaluated ROI of patient support programs using causal inference and A/B testing.</li>
-      <li>Improved promotional strategies and drove $20M in additional profit through marketing mix modeling.</li>
+      <li>Led a team of 3 to build a pipeline for customer targeting for an oncology drug in a $5.8B market.</li>
+      <li>Created a semi-supervised early adoption model using analogous drug data and patient claims.</li>
+      <li>Built a cancer stage detection model using real-world data to enhance clinical outreach strategy.</li>
+      <li>Developed a KOL identification engine using community detection and PageRank on patient claim networks.</li>
+      <li>Used causal inference and A/B testing to evaluate ROI of patient support programs.</li>
+      <li><strong>Tech stack:</strong> XGBoost, PySpark, Network Analysis, Git, Argo</li>
     </ul>
 
-    <h3>IIITM Gwalior – Research Intern (2019)</h3>
+    <h3>ZS Associates – Gurugram, India (Jan 2021 – Dec 2023)<br><em>Decision Analytics Associate</em></h3>
     <ul>
-      <li>Developed a graphene-based sensor to detect rotting produce in cold storage environments.</li>
+      <li>Built promotion response models to optimize marketing ROI across channels.</li>
+      <li>Drove $20M in profit via predictive modeling for budget optimization.</li>
+      <li>Managed resource allocation strategy during a 125% budget scale-up.</li>
+      <li>Used Google Analytics and regression to identify KPIs boosting national-level sales.</li>
+      <li><strong>Tech stack:</strong> Python, SQL, Random Forest, Tableau, Google Analytics</li>
     </ul>
   </section>
 
